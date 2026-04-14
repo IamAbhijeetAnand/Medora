@@ -2,7 +2,7 @@ import { getCurrentUser } from "@/actions/onboarding";
 import { redirect } from "next/navigation";
 
 export const metadata = {
-  title: "Onboarding - MediMeet",
+  title: "Onboarding - Medora",
   description: "Complete your profile to get started with MediMeet",
 };
 

@@ -7,6 +7,9 @@ import { Badge } from "@/components/ui/badge";
 import Pricing from "@/components/pricing";
 import { creditBenefits, features, testimonials } from "@/lib/data";
 
+import ChatbotWidget from "@/components/chatbot/ChatbotWidget";
+
+
 export default function Home() {
   return (
     <div className="bg-background">
@@ -253,6 +256,9 @@ export default function Home() {
           </Card>
         </div>
       </section>
+
+      <ChatbotWidget />
+
     </div>
   );
 }
