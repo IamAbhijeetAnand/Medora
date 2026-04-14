@@ -5,6 +5,7 @@ import { Toaster } from "sonner";
 import Header from "@/components/header";
 import { dark } from "@clerk/themes";
 import { ThemeProvider } from "@/components/theme-provider";
+import Link from "next/link"; // ✅ IMPORTANT FIX
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,10 +41,10 @@ export default function RootLayout({ children }) {
             {/* 🔥 MEDORA FOOTER */}
             <footer className="bg-black border-t border-gray-800 mt-16">
               <div className="container mx-auto px-6 py-12">
-                
+
                 {/* Top Section */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                  
+
                   {/* Brand */}
                   <div>
                     <h2 className="text-2xl font-bold text-white">Medora</h2>
@@ -57,10 +58,10 @@ export default function RootLayout({ children }) {
                   <div>
                     <h3 className="text-white font-semibold mb-3">Quick Links</h3>
                     <ul className="space-y-2 text-gray-400 text-sm">
-                      <li><a href="/" className="hover:text-green-400">Home</a></li>
-                      <li><a href="/doctors" className="hover:text-green-400">Doctors</a></li>
-                      <li><a href="/appointments" className="hover:text-green-400">Appointments</a></li>
-                      <li><a href="/contact" className="hover:text-green-400">Contact</a></li>
+                      <li><Link href="/" className="hover:text-green-400">Home</Link></li>
+                      <li><Link href="/doctors" className="hover:text-green-400">Doctors</Link></li>
+                      <li><Link href="/appointments" className="hover:text-green-400">Appointments</Link></li>
+                      <li><Link href="/contact" className="hover:text-green-400">Contact</Link></li>
                     </ul>
                   </div>
 
@@ -68,9 +69,9 @@ export default function RootLayout({ children }) {
                   <div>
                     <h3 className="text-white font-semibold mb-3">Company</h3>
                     <ul className="space-y-2 text-gray-400 text-sm">
-                      <li><a href="#" className="hover:text-green-400">About Us</a></li>
-                      <li><a href="#" className="hover:text-green-400">Privacy Policy</a></li>
-                      <li><a href="#" className="hover:text-green-400">Terms & Conditions</a></li>
+                      <li><Link href="#" className="hover:text-green-400">About Us</Link></li>
+                      <li><Link href="#" className="hover:text-green-400">Privacy Policy</Link></li>
+                      <li><Link href="#" className="hover:text-green-400">Terms & Conditions</Link></li>
                     </ul>
                   </div>
 
